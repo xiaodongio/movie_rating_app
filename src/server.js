@@ -5,7 +5,16 @@ const cors = require('cors');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
+const passportJwt = require('passport-jwt');
 
+const ExtractJwt = passportJwt.ExtractJwt;
+const JwtStrategy = passportJwt.Strategy;
+const jwtOptions = {};
+jwtOptions.jwtFormRequest = ExtractJwt.fromAuthHeaderWithScheme('jwt');
+jwtOptions.secretOrKey = 'movieratingapplicationsecretkey';
+// passport.use(new JwtStrategy(jwtOptions, (jwt_payload, done) => {
+//   done();
+// }));
 
 const api = require('./controllers');
 

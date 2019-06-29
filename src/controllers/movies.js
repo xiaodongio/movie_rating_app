@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Movie = require('../models/Movie');
 const Rating = require('../models/Rating');
+const passport = require('passport');
 
 router.get('/movies', (req, res) => {
   Movie.find({}, (err, movies) => {

@@ -36,7 +36,12 @@ export default {
       this.message = "I'm doing great thank you";
     },
     async fetchMovies() {
-      const res = await this.$http.get('movies');
+      const token = window.localStorage.getItem('auth');
+      const res = await this.$http.get('movies', {
+        headers: {
+          Authorization: `JWT ${token}`,
+        },
+      });
       this.movies = res.data.movies;
     },
   },

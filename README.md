@@ -27,7 +27,7 @@ npm run e2e
 npm test
 ```
 
-
+```
  npm install bootstrap bootstrap-vue vuetify --save --registry=https://registry.npm.taobao.org
  
   npm install morgan body-parser cors mongoose --save --registry=https://registry.npm.taobao.org
@@ -36,3 +36,14 @@ npm test
   npm install nodemon --save-dev --registry=https://registry.npm.taobao.org
 
 npm install jsonwebtoken passport-jwt passport --save --registry=https://registry.npm.taobao.org
+```
+
+#### jwt 
+> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhNjhhNDMzMDJkMWNlZDU5YjExND
+  g3MCIsImlhdCI6MTUxNzI0MjM1M30.5xY59iTIjpt9ukDmxseNAGbOdz6weWL1drJkeQzoO3M
+  
+If you look at the preceding token carefully, you will see that the token has three parts
+separated by a period (.); each part has its own meaning:
+- The first part represents the header
+- The second part represents the payload
+- The third part represents the signature
